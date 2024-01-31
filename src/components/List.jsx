@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Item from './Item'
 import '../ToDo.css'
-
+import Add from './Add';
 
 export default function List() {
     
@@ -12,47 +12,35 @@ export default function List() {
         {id:0, name:'Reading', completed: completed},
         {id:1, name:'Cleaning', completed: completed},
     ])
-    const [text, setText] = useState('')
-    
-
 
     //Functions
-    const handleAdd = () => {
-        setTask((task) => [...task,  {id:task.length, name:text, completed:false},])
-        setText('')
+    const handleAdd = (added) => {
+        setTask((task)=>[...task, added])
     }
     const handleDelete = (id) => {
         setTask((task)=>task.filter((item)=> item.id !== id))
     }
-    const toggleCompleted = () => {
-        setCompleted(completed=>!completed)
-        
-    }
-    const Active = (e) => {
-        
-    }
-    const Done = (e) => {
-        
+    const toggleCompleted = (toggled) => {
+
     }
 
   return (
     <div>
-        <button>All</button>
+        {/* <button>All</button>
         <button onClick={Active}>Active</button>
-        <button onClick={Done}>Done</button>
+        <button onClick={Done}>Done</button> */}
         <ul>
             {task.map((item)=>
             (<li key={item.id}>
                 <Item 
                 task={item} 
                 handleDelete={handleDelete}
-                toggleCompleted = {toggleCompleted} />
+                toggleCompleted={toggleCompleted}
+            />
             </li>))}
         </ul>
-        <input type="text" id="text" name="text" value={text} onChange={(e)=>{
-            setText(e.target.value)
-        }}/>
-        <button onClick={handleAdd}>Add</button>
+        <Add handleAdd={handleAdd}/>
+        
     </div>
   )
 }
