@@ -1,22 +1,16 @@
 import React,{useState} from 'react'
-import List from './components/List'
-import './ToDo.css'
+import Filter from './components/Filter/Filter'
+import List from './components/List/List'
 
+const filters = ['all', 'active', 'done']
 export default function AppToDo() {
-    const All = () => {
+    const [filter, setFilter] = useState(filters[0])   
 
-    }
-    const Active = () => {
-
-    }
-    const Done = () => {
-
-    }
     
   return (
-    <div>
-    
-        <List />
-    </div>
+    <>
+        <Filter filters={filters} filter={filter} setFilter={setFilter}/>
+        <List filter={filter}/>
+    </>
   )
 }
