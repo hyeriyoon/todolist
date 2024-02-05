@@ -1,9 +1,29 @@
-form{
-
+.form{
+    background-color: var(--color-bg-dark);
+    width: 100%;
+    display: flex;;
+    padding: 1rem 1.4rem;
 }
-input{
-
-}
-button{
+.input{
+    flex: 1 0 auto;
+    border: none;
+    outline: none;
+    padding: 0 .5rem;
+    font-size: 1.2rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     
+}
+.button{
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: .7rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+.button:hover{
+    filter: brightness(115%);
 }

@@ -26,9 +26,11 @@ export default function Item({task, handleDelete, toggleCompleted}) {
         className={styles.label}
         htmlFor="checkbox">{name}</label>
 
-        <button 
-        className={styles.button}
-        onClick={()=> handleDelete(id)}><FaRegTrashAlt /></button>
+        <span className={styles.icon}>
+          <button 
+          className={styles.button}
+          onClick={()=> handleDelete(id)}><FaRegTrashAlt /></button>
+        </span>
     </div>
   )
 }

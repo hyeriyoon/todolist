@@ -28,8 +28,8 @@ export default function List({filter}) {
 const filtered = getFilteredItem(task, filter);
     
   return (
-    <section>
-        <ul>
+    <section className={styles.container}>
+        <ul className={styles.ul}>
             {filtered.map((item)=>
             (<li key={item.id}>
                 <Item 

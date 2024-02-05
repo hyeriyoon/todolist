@@ -1,8 +1,8 @@
 :root{
-  --color-bg-dark : rgb(225, 225, 225); 
-  --color-bg : rgb(248, 248, 248);
+  --color-bg-dark : rgb(244, 242, 237); 
+  --color-bg : rgb(247, 247, 247);
   --color-text : rgb(72, 72, 72);
-  --color-accent : rgb(231, 166, 44);
+  --color-accent : rgb(255, 174, 0);
 }
 
 body {
@@ -19,11 +19,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(34,193,195);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  font-size: 1.2rem;
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  accent-color: var(--color-accent);
 
 }
-
+*{
+  box-sizing: border-box;
+}
 #root{
   overflow: hidden;
   width: 100%;

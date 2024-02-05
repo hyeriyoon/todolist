@@ -11,7 +11,7 @@ export default function Add({handleAdd}) {
             setText('');
             return;
         }
-        handleAdd({id:v4(), name:text.trim(), completed: 'NY'})
+        handleAdd({id:v4(), name:text.trim(), completed: false})
         setText('')
 
     }
