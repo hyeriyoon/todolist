@@ -2,14 +2,12 @@
     background-color: var(--color-bg-dark);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: 1px solid grey;
 }
 
 .filters{
     display: flex;
-
-
 }
 
 .filter{
@@ -31,4 +29,13 @@
     display: block;
     margin-top: .2rem;
     border-top: 2px solid;
+}
+.modebutton{
+    background-color: transparent;
+    cursor: pointer;
+}
+.modebutton svg{
+    width: 20px;
+    height: 20px;
+    fill: var(--color-accent);
 }

@@ -3,6 +3,15 @@
   --color-bg : rgb(247, 247, 247);
   --color-text : rgb(72, 72, 72);
   --color-accent : rgb(255, 174, 0);
+  --color-grey: rgb(179, 178, 178);
+}
+html.darkmode{
+  --color-bg-dark: rgb(123, 88, 0);
+  --color-bg : rgb(91, 91, 91);
+  --color-text : rgb(247, 247, 247);
+  --color-accent : rgb(255, 174, 0);
+  --color-grey: rgb(212, 212, 212);
+
 }
 
 body {
@@ -54,3 +63,35 @@ ul{
 button{
   border: none;
 }
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #BEBEBE;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #FFAE00;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #FFAE00;
+}
+

@@ -13,17 +13,20 @@
     font-size: 1.3rem;
     flex: 1 1 auto;
     margin-left: .5rem;
+    color: var(--color-text);
 }
 .button{
     background-color: transparent;
-    fill: var(--color-bg);
     cursor: pointer;
     transition: all 250ms ease-in-out;
+}
+.button svg{
+    fill: var(--color-bg);
 }
 .icon{
     width: 26px;
     height: 26px;
-    background-color: rgb(179, 178, 178);
+    background-color: var(--color-grey);
     border-radius: 100%;
 }
 .icon:hover{

@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {v4 as uuidv4, v4} from 'uuid';
+import { useDarkMode } from '../../context/DarkModeContext';
 import styles from './Add.module.css'
 
 export default function Add({handleAdd}) {
     const [text, setText] = useState('')
+
+    const {darkMode} = useDarkMode();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,7 +20,7 @@ export default function Add({handleAdd}) {
     }
   return (
     <form 
-    className={styles.form}
+    className={`${styles.form}`}
     onSubmit={handleSubmit}>
       <input 
       className={styles.input}
