@@ -1,17 +1,21 @@
 :root{
+
   --color-bg-dark : rgb(244, 242, 237); 
   --color-bg : rgb(247, 247, 247);
   --color-text : rgb(72, 72, 72);
   --color-accent : rgb(255, 174, 0);
   --color-grey: rgb(179, 178, 178);
+  --color-pink: rgb(238,174,202);
+  --color-blue: rgba(148,187,233,1);
 }
 html.darkmode{
-  --color-bg-dark: rgb(123, 88, 0);
+  --color-bg-dark: rgb(114, 79, 44);
   --color-bg : rgb(91, 91, 91);
   --color-text : rgb(247, 247, 247);
   --color-accent : rgb(255, 174, 0);
   --color-grey: rgb(212, 212, 212);
-
+  --color-pink: rgb(169, 119, 126);
+  --color-blue: rgb(86, 115, 165);
 }
 
 body {
@@ -29,11 +33,12 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  background: rgb(238,174,202);
-  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: var(--color-pink);
+  background: linear-gradient(90deg, var(--color-pink) 0%, var(--color-blue) 100%);
   accent-color: var(--color-accent);
 
 }
+
 *{
   box-sizing: border-box;
 }
