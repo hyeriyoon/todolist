@@ -18,13 +18,13 @@ export default function Item({task, handleDelete, toggleCompleted}) {
         <input 
         className={styles.input}
         type="checkbox" 
-        id="checkbox" 
+        id={id} 
         checked={completed} 
         onChange={handleCheck}/>
 
         <label 
         className={styles.label}
-        htmlFor="checkbox">{name}</label>
+        htmlFor={id}>{name}</label>
 
         <span className={styles.icon}>
           <button 

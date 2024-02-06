@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Item from '../Item/Item'
 import Add from '../Add/Add';
 import styles from './List.module.css'
@@ -7,11 +7,12 @@ export default function List({filter}) {
     
     // States
   
-    const[task, setTask] = useState([
-        {id:0, name:'Reading', completed: false},
-        {id:1, name:'Cleaning', completed: false},
-    ])
-
+    const[task, setTask] = useState(()=>todo())
+    
+    
+    useEffect(()=>{
+       localStorage.setItem('task', JSON.stringify(task)) 
+    },[task])
     //Functions
     const handleAdd = (added) => {
         setTask((task)=>[...task, added])
@@ -44,6 +45,11 @@ const filtered = getFilteredItem(task, filter);
     </section>
   )
 }
+const todo = ()=>{
+    return JSON.parse(localStorage.getItem('task'));
+    
+}
+
 function getFilteredItem(task, filter){
     if(filter === 'all'){
         return task;
