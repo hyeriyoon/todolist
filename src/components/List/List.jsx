@@ -31,7 +31,7 @@ const filtered = getFilteredItem(task, filter);
   return (
     <section className={styles.container}>
         <ul className={styles.ul}>
-            {filtered.map((item)=>
+            {filtered?.map((item)=>
             (<li key={item.id}>
                 <Item 
                 task={item} 
